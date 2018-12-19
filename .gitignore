@@ -4,6 +4,5 @@ node_modules/
 themes/
 public/
 db.json
-.deploy*
 *.log
 .idea/
