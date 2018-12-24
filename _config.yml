@@ -94,11 +94,14 @@ search:
   path: search.json
   field: all
 
-
 sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
+
+# 百度分析Uid，若为空则不启用
+baidu_analytics: 9f0ecfa73797e6a907d8ea6a285df6a5
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
