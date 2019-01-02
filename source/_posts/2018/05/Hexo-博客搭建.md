@@ -206,7 +206,7 @@ $ hexo new [layout] <title>
 
 ### 效果如图
 
-![hexo-blog](http://alioss.markdown.listenwei.com/blog/hexo.png)
+![hexo-blog](http://wei-markdown.oss-cn-beijing.aliyuncs.com/blog/hexo.png)
 
 ### git 部署上线
 
