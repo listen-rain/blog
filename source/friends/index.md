@@ -1,5 +1,5 @@
 ---
-title: friends
+title: Friends
 date: 2018-12-19 16:29:48
 ---
 
