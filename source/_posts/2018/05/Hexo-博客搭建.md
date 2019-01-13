@@ -186,7 +186,7 @@ deploy:
   type: git
   repo: <repository>
   branch: <branch>
-  message:
+  message: # 自定提交信息 (默认为 Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }})
 ```
 
 其他配置，详细的配置在配置文件中都有注释
@@ -239,21 +239,44 @@ $ hexo new [layout] <title>
 
 git 部署上线
 
+1、安装 git 部署插件
 ```bash
-
 $ npm install hexo-deployer-openshift --save
+```
 
-# 别忘了创建 ignore 文件，忽略不必要的文件夹
-
-git init 
-git remote add origin <repository>
-git config --global ...
-git add --all .
+2、部署
+```
 hexo d
 ```
 
-### 参考
+部署到服务器
+
+1、创建 deploy.sh 文件
+```bash
+#!/bin/bash
+
+# Default Port 22
+rsync -atvzr --delete --force --exclude-from=.deployignore $PWD/public/ <remoteServer>:<remotePath>
+
+# Other Port
+rsync -e "ssh -p <port>" -atvzr --delete --force --exclude-from=.deployignore $PWD/public/ <remoteServer>:<remotePath>
+```
+
+nginx conf
+```
+server {
+		listen 80;
+		server_name <domainName>;
+		index index.html;
+		root  <path>;
+		
+		error_page 404 404.html;
+}
+
+```
+
+# 参考
 
 - https://hexo.io/zh-cn/docs/index.html
-- https://geeksblog.cc/
 - https://www.fanhaobai.com
+- https://geeksblog.cc/

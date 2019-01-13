@@ -107,7 +107,7 @@ baidu_analytics: 9f0ecfa73797e6a907d8ea6a285df6a5
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:listen-rain/blog.git
+  repo: git@github.com:listen-rain/blogback.git
   branch: master
   message:
 
