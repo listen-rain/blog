@@ -272,12 +272,12 @@ $ sh deploy.sh
 nginx conf
 ```
 server {
-		listen 80;
-		server_name <domainName>;
-		index index.html;
-		root  <path>;
-		
-		error_page 404 404.html;
+    listen 80;
+    server_name <domainName>;
+    index index.html;
+    root  <path>;
+    
+    error_page 404 404.html;
 }
 
 ```

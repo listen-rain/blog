@@ -75,7 +75,7 @@ top: true
 # Miscellaneous
 baidu_analytics: ''
 google_analytics: ''
-favicon: /img/favicon.jpg
+favicon: https://wei-markdown.oss-cn-beijing.aliyuncs.com/blog/avatar.jpg!circle
 
 #你的头像url
 avatar: https://wei-markdown.oss-cn-beijing.aliyuncs.com/blog/avatar.jpg!circle
