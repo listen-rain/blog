@@ -1,0 +1,22 @@
+<div id="disqus_thread"></div>
+<link rel="stylesheet" href="/disqus.css">
+<script src="/disqus.js"></script>
+<script>
+  (function () {
+    var disqus = new iDisqus('disqus_thread', {
+      forum: '<%= theme.disqus.shortname %>',
+      site: '<%= config.url %>',
+      api: '<%= theme.disqus.api %>',
+      url: '<%= url %>',
+      mode: 2,
+      timeout: 3000,
+      init: true,
+      autoCreate: true,
+      relatedType: false
+    });
+    disqus.count();
+  })();
+</script>
+
+<div id="disqus_thread"></div>
+<script>
