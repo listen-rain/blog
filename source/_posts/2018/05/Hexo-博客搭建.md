@@ -239,9 +239,11 @@ $ hexo new [layout] <title>
 
 git 部署上线
 
+<em style='color:gray'>只会部署编译好的文件，本次暂未使用</em>
+
 1、安装 git 部署插件
 ```bash
-$ npm install hexo-deployer-openshift --save
+$ npm install hexo-deployer-git --save
 ```
 
 2、部署
@@ -256,10 +258,15 @@ hexo d
 #!/bin/bash
 
 # Default Port 22
-rsync -atvzr --delete --force --exclude-from=.deployignore $PWD/public/ <remoteServer>:<remotePath>
+rsync -atvzr --delete --force --exclude-from=.deployignore $PWD/public/ <remoteUser>@<remoteServer>:<remotePath>
 
 # Other Port
-rsync -e "ssh -p <port>" -atvzr --delete --force --exclude-from=.deployignore $PWD/public/ <remoteServer>:<remotePath>
+rsync -e "ssh -p <port>" -atvzr --delete --force --exclude-from=.deployignore $PWD/public/ <remoteUser>@<remoteServer>:<remotePath>
+```
+
+2、部署
+```
+$ sh deploy.sh
 ```
 
 nginx conf
